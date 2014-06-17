@@ -188,7 +188,7 @@ func main() {
 
 	http.Handle("/", http.HandlerFunc(MainPageHandler))
 
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":8080", nil)
 }
 
 var f MQTT.MessageHandler = func(client *MQTT.MqttClient, msg MQTT.Message) {
