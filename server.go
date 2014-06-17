@@ -155,7 +155,7 @@ func MainPageHandler(w http.ResponseWriter, r *http.Request) {
 var b *Broker
 
 func main() {
- 
+
 	b = &Broker{
 		make(map[chan Sensor]bool),
 		make(chan (chan Sensor)),
@@ -188,7 +188,7 @@ func main() {
 
 	http.Handle("/", http.HandlerFunc(MainPageHandler))
 
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":80", nil)
 }
 
 var f MQTT.MessageHandler = func(client *MQTT.MqttClient, msg MQTT.Message) {
